@@ -58,7 +58,7 @@ body{
 }
 .home{
     height:100vh;
-    background: url('blue\ face.jpg') no-repeat;
+    background: url('https://cdn.vectorstock.com/i/500p/68/56/golden-stage-with-light-rays-effect-vector-50366856.jpg') no-repeat;
     /* background-color: grey; */
     background-size: cover;
     display: flex;
