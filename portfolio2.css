@@ -9,6 +9,7 @@
 body{
     /* background: #081b29; */
     color: #ededed;
+    /* background-color: #a52a2a; */
 }
 .header{
     position:fixed;
@@ -16,7 +17,7 @@ body{
     left:0;
     width:100%;
     padding:20px 10%;
-    background:;transparent;
+    background: #00abf0;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +53,7 @@ body{
 }
 .navbar a:hover,
 .navbar a.active{
-    color:#00abf0;
+    color:#a52a2a;
     /* bottom:10px; */
     position:relative;
 }
@@ -252,6 +253,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px 0 0 0;
     width: 100%;
+    /* background:brown; */
 }
 .hg{
     margin: 0px;
@@ -260,6 +262,7 @@ body{
     justify-content: space-around;
     background-color: white;
     overflow: hidden;
+    /* background-color: #a52a2a; */
 }
 .hg1{
     margin: 0px;
@@ -268,6 +271,7 @@ body{
     justify-content: space-around;
     background-color: white;
     overflow: hidden;
+    /* background-color: #a52a2a; */
 }
 .hg1 img{
     margin: 20px 0;
@@ -285,6 +289,7 @@ body{
     justify-content: space-around;
     background-color: white;
     overflow: hidden;
+    /* background-color: #a52a2a; */
 }
 .hg2 img{
     margin: 20px 0;
@@ -337,6 +342,7 @@ body{
 .vc{
     color:#00abf0;
     display:inline-flex;
+    /* background-color: #a52a2a; */
 }
 .vc img{
     width:200px;
@@ -354,6 +360,7 @@ body{
 .bv{
     color:#00abf0;
     display:inline-flex;
+    /* background-color: #a52a2a; */
 }
 .bv img{
     width:200px;
@@ -379,6 +386,7 @@ body{
     width: 100%;
     justify-content: space-around;
     /* position:space */
+    background-color: #a52a2a;
 }
 .cd img{
     width:350px;
@@ -416,13 +424,16 @@ body{
     }
     .qwe{
         padding:18px;
+        background-color: white;
     }
     .hg{
         flex-direction: column;
+        /* background-color: white; */
     }
     .hg img{
         width:300px;
         padding:40px 30px;
+        background-color: #00abf0;
     }
     .hg1{
         flex-direction: column;
@@ -430,6 +441,7 @@ body{
     .hg1 img{
         width:300px ;
         padding:40px 30px;
+        background-color: #00abf0;
     }
     .hg2{
         flex-direction: column;
@@ -437,6 +449,7 @@ body{
     .hg2 img{
         width:300px;
         padding:40px 30px;
+        background-color: #00abf0;
     }
     .home{
         padding:100% 2%;
