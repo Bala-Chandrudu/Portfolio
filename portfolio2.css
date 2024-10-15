@@ -54,20 +54,13 @@ body{
     background-color: #081b29;
     border-radius: 5px;
 }
-/* .navbar a:hover,
-.navbar a.active{
-    color:#a52a2a;
-    /* bottom:10px; */
-    /* position:relative; */
-} */
+
 .navbar a:hover{
     position:relative;
     bottom:10px;
 }
 .home{
     height:100vh;
-    /* background: url('https://cdn.vectorstock.com/i/500p/68/56/golden-stage-with-light-rays-effect-vector-50366856.jpg') no-repeat; */
-    /* background-color: grey; */
     background-color: #081b29;
     background-size: cover;
     display: flex;
