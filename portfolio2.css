@@ -6,6 +6,11 @@
 }
 body{
     color: #ededed;
+    cursor:2px; 
+}
+html,body{
+    height:100%;
+    margin:0;
 }
 .header{
     position:sticky;
@@ -92,6 +97,11 @@ section{
     gap:10%;
     text-decoration: none;
 }
+.pass:hover{
+    color:red;
+    position:absolute;
+    background-color: black;
+}
 .marvel{
     color:white;
     font-size:15px;
@@ -102,14 +112,20 @@ section{
     padding: 10px;
     border-radius: 10px;
     gap:10%;
-
+}
+.wq{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/015/319/652/original/glowing-stars-sparkle-on-green-screen-background-4k-animation-free-video.jpg');
+}
+.marvel:hover{
+    color:red;
+    position:absolute;
+    background-color: #000;
 }
 .web h1{
     color:#00abf0;
     padding:55px;
     justify-content: space-between;
     display: inline-flex;
-    
 }
 .prog h1{
     color:#00abf0;
@@ -158,15 +174,15 @@ section{
     background-color:blue;
     font-size: 15px;
     width:300px;
-    /* text-decoration: none; */
     border-radius:10px;
-    /* flex-direction: colomn; */
-    /* top:10px; */
-    /* left:30px; */
     padding:10px;
      border:1px solid #00abf0;
     background-color: #00abf0;
-    /* background-image: url('external-link.png'); */
+}
+.mind:hover{
+    position:absolute;
+    background-color:#000;
+    color:red;
 }
 .logo::before{
     content:'';
@@ -186,13 +202,7 @@ section{
     font-weight:500;
     margin-left: 35px;
     transition:.3s;
-    /* border: 1px solid black; */
-    /* background-color: #081b29; */
     border-radius: 5px;
-}
-.navbar a:hover{
-    /* position:relative;
-    bottom:10px; */
 }
 .home{
     height:100vh;
@@ -226,8 +236,6 @@ section{
     background:#081b29;
     animation: showRight 1s ease forwards;
     animation-delay: 1s;
-    /* font-family: ''; */
-
 }
 .home-content h3{
     position:relative;
@@ -280,7 +288,6 @@ section{
 }
 .berry{
     background-color: #00abf0;
-    /* width:380px; */
 }
 .berry h2{
     justify-content: center;
@@ -394,14 +401,14 @@ section{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px 0 0 0;
     width: 100%;
-    /* background:brown; */
+    background:brown;
 }
 .hg{
     margin: 0px;
     display: flex;
     width: 100%;
     justify-content: space-around;
-    background-color: white;
+    background-color: yellow;
     overflow: hidden;
     /* border:2px solid #00abf0; */
     /* background-color: #a52a2a; */
@@ -438,9 +445,8 @@ section{
     display: flex;
     width: 100%;
     justify-content: space-around;
-    background-color: white;
+    background-color: yellow;
     overflow: hidden;
-    /* background-color: #a52a2a; */
 }
 .hg1 img{
     margin: 20px 0;
@@ -456,9 +462,8 @@ section{
     display: flex;
     width: 100%;
     justify-content: space-around;
-    background-color: white;
+    background-color: yellow;
     overflow: hidden;
-    /* background-color: #a52a2a; */
 }
 .hg2 img{
     margin: 20px 0;
@@ -478,7 +483,7 @@ section{
     display: flex;
     width: 100%;
     justify-content: space-around;
-    background-color: white;
+    background-color: yellow;
     overflow: hidden;
 }
 .hg4{
@@ -486,7 +491,7 @@ section{
     display: flex;
     width: 100%;
     justify-content: space-around;
-    background-color: white;
+    background-color: yellow;
     overflow: hidden;
 }
 .hg4 img{
@@ -560,7 +565,6 @@ section{
 .vc{
     color:#00abf0;
     display:inline-flex;
-    /* background-color: #a52a2a; */
 }
 .vc img{
     width:200px;
@@ -578,7 +582,6 @@ section{
 .bv{
     color:#00abf0;
     display:inline-flex;
-    /* background-color: #a52a2a; */
 }
 .bv img{
     width:200px;
@@ -603,8 +606,6 @@ section{
     position: relative;
     width: 100%;
     justify-content: space-around;
-    /* position:space */
-    /* background-color: #081b29; */
 }
 .cd img{
     width:350px;
@@ -651,7 +652,6 @@ section{
         flex-direction: column;
         width:380px;
         height:auto;
-        /* display: space-between; */
         padding:20px;
         gap:8px;
         position:fixed;
@@ -668,7 +668,6 @@ section{
     }
     .hg{
         flex-direction: column;
-        /* background-color: white; */
     }
     .hg img{
         width:250px;
@@ -693,14 +692,10 @@ section{
     }
     .home{
         padding:100% 2%;
-        /* gap:10%; */
     }
     .home-content p {
-        /* padding:0 0 0 0 */
         font-size: 15px;
         flex-direction: column;
-        /* width:auto; */
-        /* overflow: hidden; */
         background-color: auto;
         width: 370px;
     }
@@ -743,7 +738,6 @@ section{
     .port p{
         margin-top:20px;
         font-size: 10px;
-        /* padding: 1px; */
     }
     .tiger{
         width:380px;
