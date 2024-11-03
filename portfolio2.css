@@ -35,6 +35,7 @@ section{
 }
 .container img{
     width:350px;
+    box-shadow: red;
 }
   .image {
     width: 100%;
@@ -133,13 +134,13 @@ section{
     justify-content: space-between;
     display: inline-flex;
 }
-.hgc h1{
+/* .hgc h1{
     color:#00abf0;
     padding: 0 230px;
     justify-content: space-between;
     display: inline-flex;
-}
-.hgc1 h1{
+} */
+/* .hgc1 h1{
     color:#00abf0;
     padding: 0 230px;
     justify-content: space-between;
@@ -162,7 +163,7 @@ section{
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+} */
 .fd img{
     border:4px solid #00abf0;
     border-radius:10px ;
@@ -354,8 +355,9 @@ section{
 .home-sci{
     position:absolute;
     bottom:40px;
-    width:170px;
+    width:250px;
     display:flex;
+    gap:30px;
     justify-content: space-between;
 }
 .home-sci a{
@@ -439,6 +441,13 @@ section{
 }
 .c9 img{
     border:10px solid #000;
+}
+.cd img{
+    border:10px solid #000;
+    box-shadow: 10px 10px 20px #000;
+}
+.hg img{
+    box-shadow: 10px 10px 20px #000;
 }
 .hg1{
     margin: 0px;
@@ -647,7 +656,75 @@ section{
 .line:hover:after{
     transform:scale(1);
 }
-@media only screen and (max-width:1080px){
+/* styles.css */
+.chatbot-container {
+    width: 300px;
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.6Axh0-PYY8UQVpfS08w3gwHaE8&pid=Api&P=0&h=180');
+    margin: auto;
+    border: 7px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+}
+.messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+.message {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+.user-message {
+    background-color: #e1ffc7;
+    text-align: right;
+    color:blue;
+}
+.bot-message {
+    background-color: #f0f0f0;
+    text-align: left;
+    color:red;
+}
+.about-me{
+    text-align:center;
+    color:rgb(164, 238, 196);
+    font-size:30px;
+    background-color: #00abf0;
+}
+.btn{
+    /* background-color: blue; */
+    width:270px;
+    /* gap:30px; */
+    /* padding:40px 0%; */
+    text-align:center;
+    color:red;
+    /* cursor: pointer; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+button{
+    background-color: #00abf0;
+    color:#fff;
+    font-size: 25px;
+    cursor:pointer;
+    border-radius:20px;
+}
+button:hover{
+    background-color: #000;
+    color:red;
+}
+.input{
+    /* width:290px; */
+    height:30px;
+}
+input{
+    border-radius:50px;
+    width:270px;
+    height:30px;
+    font-size: 25px;
+}
+
+@media only screen and (max-width:1400px){
     .header{
         flex-direction: column;
         width:380px;
@@ -658,9 +735,17 @@ section{
     }
     .navbar a{
         margin-left:19px;
+        font-size:11px;
+        line-height: 5;
     }
     .logo{
-        font-size: 30px;
+        font-size: 29px;
+    }
+    .container img{
+        flex-direction: column;
+        margin-left:-363px;
+        /* margin-top:2220%; */
+        margin-bottom:250%;
     }
     .qwe{
         padding:18px;
@@ -668,25 +753,28 @@ section{
     }
     .hg{
         flex-direction: column;
+        padding:35px;
     }
     .hg img{
-        width:250px;
+        width:300px;
         padding:40px 30px;
         background-color: #00abf0;
     }
     .hg1{
         flex-direction: column;
+        padding:35px;
     }
     .hg1 img{
-        width:250px ;
+        width:300px ;
         padding:40px 30px;
         background-color: #00abf0;
     }
     .hg2{
         flex-direction: column;
+        padding:35px;
     }
     .hg2 img{
-        width:250px;
+        width:300px;
         padding:40px 30px;
         background-color: #00abf0;
     }
@@ -695,6 +783,7 @@ section{
     }
     .home-content p {
         font-size: 15px;
+        margin-top:8%;
         flex-direction: column;
         background-color: auto;
         width: 370px;
@@ -748,7 +837,30 @@ section{
     footer{
         width:380px;
     }
-    .home .container img{
+    .hg3 {
         flex-direction: column;
+        padding:35px;
     }
+    .hg3 img{
+        width:300px;
+        padding:40px 30px;
+        background-color: #00abf0;
+    }
+    .hg4{
+        flex-direction: column;
+        padding:35px;
+    }
+    .hg4 img{
+        width:300px;
+        padding:40px 30px;
+        background-color: #00abf0;
+    }
+    .btn-box{
+        padding:0px 5px;
+    }
+    .home-sci {
+        padding:10 10%;
+        /* width:2px */
+    }
+
 }
