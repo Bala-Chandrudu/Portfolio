@@ -193,15 +193,44 @@
     </div>
   </footer>
   <script>
-      // document.onmousemove = (e) => {
-      //   let img = document.createElement("img");
-      //   img.src = "https://www.flaticon.com/free-icon/hunter_2913517";
-      //   img.style.position = "absolute";
-      //   img.style.left = e.pageX + "px";
-      //   img.style.top = e.pageY + "px";
-      //   img.animate([{opacity:0}],{duration:400}).onfinish = () => img.remove();
-      //   document.body.append(img);
-      // }
+     const messages = document.getElementById('messages');
+
+function addMessage(content, sender) {
+    const message = document.createElement('div');
+    message.classList.add('message', `${sender}-message`);
+    message.textContent = content;
+    messages.appendChild(message);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function handleUserInput() {
+    const userInput = document.getElementById('userInput').value;
+    addMessage(userInput, 'user');
+    document.getElementById('userInput').value = '';
+    botResponse(userInput);
+}
+
+function botResponse(input) {
+    const lowerInput = input.toLowerCase();
+    let response = '';
+
+    if (lowerInput.includes('programming skills')) {
+        response = 'I have experience in C , Java , and python basics.';
+    } else if(lowerInput.includes('web designing')){
+        response = 'I have experience in HTML , CSS ,and JavaScript.';
+    } else if (lowerInput.includes('projects')) {
+        response = 'I have worked on several projects including a chatbot, a portfolio website, and a marvel cards and password-generator , Mind Game.';
+    } else if (lowerInput.includes('contact')) {
+        response = 'You can reach me via email balachandrududevarakonda3@gmail.com.';
+    }
+    else if(lowerInput.includes('certifications')){
+        response = 'I have completed sevaral certifications in  CSS , JAVA , HACKATON , LSRW ENGLISH CERTIFICATE IN SILVER , WEB-DEVELOPMENT BOOT CAMP AND ETC. And To See Portfolio,'
+    }
+    else {
+        response = "Hi I am Bala Chandrudu How Can I Help For You! You Can Ask About My programming skills ,web designing , Projects, Certifications ,or to contact me.";
+    }
+    addMessage(response, 'bot');
+}
   </script>
   
   
