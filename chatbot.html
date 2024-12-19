@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon shortcut" href="https://cdn4.iconfinder.com/data/icons/people-avatar-1-2/512/29-1024.png">
+    <title>Portfolio/ChatBot</title>
+    <style>
+           *{
+             padding:0;
+             box-sizing: border-box;
+             margin: 0;
+            }
+            body{
+                 background-color: #081b29;
+                 position:fixed;
+            }
+            .header{
+          background-color: #081b29;
+          position: fixed;
+          top:0;
+          left:0;
+          width:100%;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index:10;
+         }
+         .logo{
+                      position:relative;
+                      font-size: 25px;
+                      color:#fff;
+                      text-decoration: none;
+                      font-weight:600;
+                      cursor:default;
+                  }
+                  .logo::before{
+          content:'';
+          position:absolute;
+          top:0;
+          right:0;
+          width:100%;
+          height: 100%;
+          background:#1d1d1d;
+          animation: showRight 1s ease forwards;
+          animation-delay: .4s;
+      }
+      .navbar a{
+                      font-size: 18px;
+                      color:white;
+                      text-decoration: none;
+                      font-weight:500;
+                      margin-left: 35px;
+                      transition:.3s;
+                      border-radius: 5px;
+                  }
+                  .line{
+                      width:max-content;
+                      font-size:58px;
+                      position:relative;
+                      cursor: pointer;
+                      margin:100px auto;
+                  }
+                  .line::after{
+                     content:"";
+                     position:absolute;
+                     bottom:-5px;
+                     height:4px;
+                     width:100%;
+                     left:0;
+                     background-color: #fff;
+                     transition:0.3s;
+                     transition-timing-function:ease-in-out;
+                     transform:scale(0);
+                  }
+                  .line:hover:after{
+                     transform:scale(1);
+                  }
+                  .chatbot-container {
+        width: 300px;
+        background-image: url("https://tse4.mm.bing.net/th?id=OIP.6Axh0-PYY8UQVpfS08w3gwHaE8&pid=Api&P=0&h=180");
+        margin: auto;
+        border: 7px solid #000;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .messages {
+        height: 400px;
+        overflow-y: auto;
+        padding: 10px;
+        /* width:800px; */
+      }
+      .message {
+        margin: 5px;
+        padding: 8px;
+        border-radius: 5px;
+      }
+      .user-message {
+        background-color: #e1ffc7;
+        text-align: right;
+        color: blue;
+      }
+      .bot-message {
+        background-color: #f0f0f0;
+        text-align: left;
+        color: red;
+      }
+      .btn {
+        width: 270px;
+        /* gap:30px; */
+        /* padding:40px 0%; */
+        text-align: center;
+        color: red;
+      }
+      button:hover {
+        background-color: #000;
+        color: red;
+      }
+      .input {
+        /* width:290px; */
+        height: 30px;
+      }
+      input {
+        border-radius: 50px;
+        width: 270px;
+        height: 30px;
+        font-size: 25px;
+      }
+      button {
+        background-color: #00abf0;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        border-radius: 20px;
+        /* margin-bottom:-16px; */
+      }
+      .jh{
+       align-items: center;
+       justify-content: center;
+       padding:10% 20%;
+       display: flex;
+        gap: 200px;
+        background-color: #00abf0;
+        color: #fff;
+        border-radius: 20px;
+      }
+      .lk{
+        font-size: 30px;
+        background-image: linear-gradient(to right, rgb(45, 22, 100) 30%, rgb(181, 14, 14) 30%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      }
+      .hj{
+        font-size: 90px;
+      }
+                  @keyframes showRight{
+                    100%{
+                        width:0;
+                    }
+                  }
+                  .hj{
+            width: 0px;
+            height: 0;
+            border-right: 50px solid #333;
+            border-bottom: 30px solid transparent;
+            border-top: 40px solid transparent;
+            /* transform: rotate(180deg); */
+            animation: moveLeft 1s infinite ease-in-out;
+        }
+        @keyframes moveLeft{
+            20% { transform: translateX(0); }
+            40% { transform: translateX(100%); }
+            60% { transform: translateX(0); }
+            80% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/people-avatar-1-2/512/29-1024.png"
+            width="30px"
+          />
+          Bala SR Devarakonda</a
+        >
+        <nav class="navbar">
+          <a target="_blank" href="index.html" class="line">Home</a>
+          <a href="chatbot.html" class="line">Chatbot</a>
+          <a href="projects.html" class="line">Projects</a>
+          <a href="aboutme.html" class="line">About Me</a>
+          <a href="certifications.html" class="line">Certifications</a>
+          <a href="contact me.html" class="line">Contact</a>
+          <a href="skills.html" class="line">Skills</a>
+        </nav>
+      </header>
+      <div class="jh">
+        <div class="chatbot-container">
+          <div id="chatbox" class="chatbox">
+            <div id="messages" class="messages"></div>
+          </div>
+          <div class="input">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask me something..."
+              autofocus
+            />
+          </div>
+          <div class="btn">
+            <button onclick="handleUserInput()">Send</button>
+          </div>
+        </div>
+        <div class="hj">
+        </div>
+        <div class="lk">
+            <h1>For Further Details About Me Use ChatBot</h1>
+        </div>
+      </div>
+      <script>
+        const messages = document.getElementById("messages");
+  
+        function addMessage(content, sender) {
+          const message = document.createElement("div");
+          message.classList.add("message", `${sender}-message`);
+          message.textContent = content;
+          messages.appendChild(message);
+          messages.scrollTop = messages.scrollHeight;
+        }
+  
+        function handleUserInput() {
+          const userInput = document.getElementById("userInput").value;
+          addMessage(userInput, "user");
+          document.getElementById("userInput").value = "";
+          botResponse(userInput);
+        }
+  
+        function botResponse(input) {
+          const lowerInput = input.toLowerCase();
+          let response = "";
+  
+          if (lowerInput.includes("programming skills")) {
+            response = "I have experience in C , Java , and python basics.";
+          } else if (lowerInput.includes("web designing")) {
+            response = "I have experience in HTML , CSS ,and JavaScript.";
+          } else if (lowerInput.includes("projects")) {
+            response =
+              "I have worked on several projects including a chatbot, a portfolio website, and a marvel cards, password-generator , Mind Game and Online Compiler.";
+          } else if (lowerInput.includes("contact")) {
+            response =
+              "You can reach me via email balachandrududevarakonda3@gmail.com,to message me.";
+          } else if (lowerInput.includes("certifications")) {
+            response =
+              "I have completed sevaral certifications in  CSS , JAVA , HACKATON , LSRW ENGLISH CERTIFICATE IN SILVER , WEB-DEVELOPMENT BOOT CAMP AND ETC. And To See Portfolio,";
+            // <a href="portfolio.html" >see my certifications</a>
+          } else {
+            response =
+              "Hi I am Bala Chandrudu How Can I Help For You! You Can Ask About My programming skills ,web designing , Projects, Certifications ,or to contact me.";
+          }
+          addMessage(response, "bot");
+        }
+      </script>
+  
+</body>
+</html>
