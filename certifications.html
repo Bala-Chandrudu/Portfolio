@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon shortcut"
+      href="https://cdn4.iconfinder.com/data/icons/people-avatar-1-2/512/29-1024.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio/Certifications</title>
+    <style>
+                  *{
+                      padding:0;
+                      box-sizing: border-box;
+                      margin: 0;
+                  }
+                  body{
+                      background-color: #081b29;
+                      position:fixed;
+                  }
+                  .berry{
+                      background-color: #00abf0;
+                      /* position:fixed; */
+                  }
+                  .berry h2{
+                      justify-content: center;
+                      text-align: center;
+                      left:50%;
+                      padding: 10px;
+                      /* position:fixed; */
+                  }
+                  .header{
+          background-color: #081b29;
+          position: fixed;
+          top:0;
+          left:0;
+          width:100%;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index:10;
+         }
+                  .container{
+                      margin-top: 70px;
+                      width:100vw;
+                      height:80vh;
+                      display:flex;
+                      justify-content:center;
+                      align-items:center;
+                      overflow: hidden;
+                  }
+                  .logo{
+                      position:relative;
+                      font-size: 25px;
+                      color:#fff;
+                      text-decoration: none;
+                      font-weight:600;
+                      cursor:default;
+                  }
+                  .logo::before{
+          content:'';
+          position:absolute;
+          top:0;
+          right:0;
+          width:100%;
+          height: 100%;
+          background:#1d1d1d;
+          animation: showRight 1s ease forwards;
+          animation-delay: .4s;
+      }
+      .navbar a{
+                      font-size: 18px;
+                      color:white;
+                      text-decoration: none;
+                      font-weight:500;
+                      margin-left: 35px;
+                      transition:.3s;
+                      border-radius: 5px;
+                  }
+                  .line{
+                      width:max-content;
+                      font-size:58px;
+                      position:relative;
+                      cursor: pointer;
+                      margin:100px auto;
+                  }
+                  .line::after{
+                     content:"";
+                     position:absolute;
+                     bottom:-5px;
+                     height:4px;
+                     width:100%;
+                     left:0;
+                     background-color: #fff;
+                     transition:0.3s;
+                     transition-timing-function:ease-in-out;
+                     transform:scale(0);
+                  }
+                  .line:hover:after{
+                     transform:scale(1);
+                  }
+                  .slider {
+                      height: 100%;
+                      width:100vw;
+                      display: flex;
+                      perspective: 1000px;
+                      position: relative;
+                      overflow: hidden;
+                      align-items:center;
+                  }
+                    .box1{      background:url('https://i.postimg.cc/nchCmkwL/css-certificate.png');
+                      background-size:cover;
+                      background-position:center center;
+                      /* height:100vh; */
+                  }
+                    .box2{
+                    background:url('https://i.postimg.cc/cJXzvdKC/java-assesment.jpg');
+                      background-size:cover;
+                      background-position:center center;}
+                    .box3{
+                    background:url('https://i.postimg.cc/1tdYKMrZ/hackit.jpg');
+                      background-size:cover;
+                      background-position:center center;}
+                    .box4{
+                    background:url('https://i.postimg.cc/76CyD5Bw/life-skills-certificate.jpg');
+                      background-size:cover;
+                      background-position:center center;}
+                     .box5{
+                     background:url('https://i.postimg.cc/9fM6t4HZ/codebingo.jpg');
+                      background-size:cover;
+                      background-position:center center;}
+                    .box6{
+                    background:url('https://i.postimg.cc/prN3HqhJ/medha.jpg');
+                      background-size:cover;
+                      background-position:center center;}
+                    .box7{
+                    background:url('https://i.postimg.cc/Kv2CppyZ/viksit-bharat.jpg');
+                      background-size:cover;
+                      background-position:center center;}
+
+                    .slider [class*="box"] {
+                    /*   float: left; */
+                      overflow: hidden;
+                      border-radius:20px;
+                      transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+                        position:absolute;
+                    }
+                    .slider [class*="box"]:nth-child(7),
+                    .slider [class*="box"]:nth-child(1) {
+                      width: 100vh;
+                      height: 100%;
+                      transform: scale(0.6) translate(-50%,-50%);
+                      top: 30%;
+                      z-index:1;
+                    }
+                    .slider [class*="box"]:nth-child(2),
+                    .slider [class*="box"]:nth-child(6) {
+                      width: 100vh;
+                      height: 100%;
+                      transform: scale(0.6) translate(-50%,-50%);
+                      top: 30%;
+                      z-index:2;
+                    }
+                    .slider [class*="box"]:nth-child(3),
+                    .slider [class*="box"]:nth-child(5) {
+                      width: 100vh;
+                      height: 100%;
+                      transform: scale(0.6) translate(-50%,-50%);
+                      top: 30%;
+                      z-index:3;
+                    }
+                    .slider [class*="box"]:nth-child(4) {
+                      width: 60vw;
+                      height: 90%;
+                      border:5px ridge #081b29;
+                      color: #fff;
+                      transform: scale(1) translate(-50%,-50%);
+                      top: 50%;
+                      z-index:4;
+                    }
+                    .slider [class*="box"]:nth-child(1){
+                      left:-13%;}
+                    .slider [class*="box"]:nth-child(2){
+                      left:-5%;}
+                    .slider [class*="box"]:nth-child(3){
+                      left:10%;}
+                    .slider [class*="box"]:nth-child(4){
+                      left:50%;}
+                    .slider [class*="box"]:nth-child(5){
+                      left:71%;}
+                    .slider [class*="box"]:nth-child(6){
+                      left:85%;}
+                    .slider [class*="box"]:nth-child(7){
+                      left:100%;}
+                    .slider .firstSlide {
+                        -webkit-animation:  firstChild 1s;
+                        animation:  firstChild 1s;
+                    }
+                    @-webkit-keyframes firstChild {
+                        0% {left:100%; transform: scale(0.2) translate(-50%,-50%);}
+                        100% {left: -13%; transform: scale(0.2) translate(-50%,-50%);}
+                    }
+                    @keyframes firstChild {
+                       0% {left:100%; transform: scale(0.2) translate(-50%,-50%);}
+                        100% {left: -13%; transform: scale(0.2) translate(-50%,-50%);}
+                    }
+                  @keyframes showRight{
+                         100%{
+                             width:0;
+                         }
+                  }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/people-avatar-1-2/512/29-1024.png"
+          width="30px"
+        />
+        Bala SR Devarakonda</a
+      >
+      <nav class="navbar">
+        <a target="_blank" href="index.html" class="line">Home</a>
+        <a href="chatbot.html" class="line">Chatbot</a>
+        <a href="projects.html" class="line">Projects</a>
+        <a href="aboutme.html" class="line">About Me</a>
+        <a href="#" class="line">Certifications</a>
+        <a href="contact me.html" class="line">Contact</a>
+        <a href="skills.html" class="line">Skills</a>
+      </nav>
+    </header>
+    <div class="berry" id="berry">
+      <h2>My Certifications</h2>
+    </div>
+    <div class="container">
+      <div class="slider">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+      </div>
+    </div>
+    <div id="test"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      function rotate() {
+        var lastChild = $(".slider div:last-child").clone();
+        /$('#test').html(lastChild)/;
+        $(".slider div").removeClass("firstSlide");
+        $(".slider div:last-child").remove();
+        $(".slider").prepend(lastChild);
+        $(lastChild).addClass("firstSlide");
+      }
+
+      window.setInterval(function () {
+        rotate();
+      }, 4000);
+    </script>
+  </body>
+</html>
