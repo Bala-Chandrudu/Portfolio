@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon shortcut" href="https://cdn4.iconfinder.com/data/icons/people-avatar-1-2/512/29-1024.png">
+    <title>Portfolio/About me</title>
+    <style>
+           *{
+             padding:0;
+             box-sizing: border-box;
+             margin: 0;
+            }
+            body{
+                 background-color: #081b29;
+                 position:fixed;
+            }
+            .header{
+          background-color: #081b29;
+          position: fixed;
+          top:0;
+          left:0;
+          width:100%;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index:10;
+         }
+         .logo{
+                      position:relative;
+                      font-size: 25px;
+                      color:#fff;
+                      text-decoration: none;
+                      font-weight:600;
+                      cursor:default;
+                  }
+                  .logo::before{
+          content:'';
+          position:absolute;
+          top:0;
+          right:0;
+          width:100%;
+          height: 100%;
+          background:#1d1d1d;
+          animation: showRight 1s ease forwards;
+          animation-delay: .4s;
+      }
+      .navbar a{
+                      font-size: 18px;
+                      color:white;
+                      text-decoration: none;
+                      font-weight:500;
+                      margin-left: 35px;
+                      transition:.3s;
+                      border-radius: 5px;
+                  }
+                  .line{
+                      width:max-content;
+                      font-size:58px;
+                      position:relative;
+                      cursor: pointer;
+                      margin:100px auto;
+                  }
+                  .line::after{
+                     content:"";
+                     position:absolute;
+                     bottom:-5px;
+                     height:4px;
+                     width:100%;
+                     left:0;
+                     background-color: #fff;
+                     transition:0.3s;
+                     transition-timing-function:ease-in-out;
+                     transform:scale(0);
+                  }
+                  .line:hover:after{
+                     transform:scale(1);
+                  }
+                  .er{
+                    padding:8% 4%;
+                    background-color: green;
+                    width:100%;
+                    height: 100%;
+                    border-radius: 10%;
+
+                  }
+                  .er h1{
+                    color:red;
+                  }
+                  .er p{
+                    color:black;
+                    text-align: center;
+                  }
+                  .bv{
+                    padding:10% 10%;
+                    background-color: #081b29;
+                    width:100%;
+                    /* justify-content: center; */
+                    align-items: center;
+                    display: flex;
+                    gap:20%;
+                    /* border-radius: 10%; */
+                    /* text-align: center; */
+                  }
+                  .pj img{
+                    width:100%;
+                    border-radius:50%;
+                    border:6px solid blue;
+                  }
+                  .pj img:hover{
+                    transform: scale(1.05);
+                  }
+                  .hj{
+            width: 0px;
+            height: 0;
+            border-right: 50px solid red;
+            border-bottom: 30px solid transparent;
+            border-top: 40px solid transparent;
+            /* transform: rotate(180deg); */
+            animation: moveLeft 1s infinite ease-in-out;
+        }
+        @keyframes moveLeft{
+            20% { transform: translateX(0); }
+            40% { transform: translateX(100%); }
+            60% { transform: translateX(0); }
+            80% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+                  @keyframes showRight{
+                    100%{
+                        width:0;
+                    }
+                  }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/people-avatar-1-2/512/29-1024.png"
+            width="30px"
+          />
+          Bala SR Devarakonda</a
+        >
+        <nav class="navbar">
+          <a href="index.html" class="line">Home</a>
+          <a href="chatbot.html" class="line">Chatbot</a>
+          <a href="projects.html" class="line">Projects</a>
+          <a href="#" class="line">About Me</a>
+          <a href="certifications.html" class="line">Certifications</a>
+          <a href="contact me.html" class="line">Contact</a>
+          <a href="skills.html" class="line">Skills</a>
+        </nav>
+      </header>
+      <div class="bv">
+      <div class="er">
+        <h1>About Me</h1>
+        <br>
+        <p>Hi! My name is Bala Chandrudu Devarakonda, and I’m on a journey to become a full-stack developer. I’m passionate about building applications that are both functional and visually appealing, and I enjoy diving deep into both front-end and back-end development.
+          I’m currently sharpening my skills in JavaScript, React, Node.js, and I’m always excited to take on new challenges to grow as a developer.
+          When I’m not coding, I enjoy play sports and videogames. My goal is to create impactful projects that make a difference in people’s lives.</p>
+      </div>
+      <div class="hj"></div>
+      <div class="pj">
+        <img src="me.jpg" alt="">
+      </div>
+      </div>
+</body>
+</html>
