@@ -124,7 +124,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 50px;
-        margin-left: 110%;
+        margin-left: 0%;
       }
       button:hover {
         background-color: #4cae4c;
@@ -132,6 +132,25 @@
                   @keyframes showRight{
                     100%{
                         width:0;
+                    }
+                  }
+                  @media only screen and (max-width:1080px){
+                    .header{
+                      flex-direction: column;
+                    }
+                    .navbar a{
+                      font-size: 7px;
+                      margin-left: 10px;
+                    }
+                    .logo{
+                      font-size: 20px;
+                    }
+                    .container{
+                      width:200%;
+                      padding:10px 10%;
+                    }
+                    .kl{
+                      padding:10px 26%;
                     }
                   }
     </style>
