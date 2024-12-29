@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- <link rel="stylesheet" href="style1.css" /> -->
+     <style>
+        *{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: var(--primary-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primary-color: green;
+    --secondary-color: #edf2fc;
+}
+.dark-theme{
+    --primary-color:#edf2fc;
+    --secondary-color: green;
+}
+#theme{
+    cursor: pointer;
+    color:var(--secondary-color);
+}
+.hero{
+    height:100vh;
+    width:100%;
+    background:#edf2fc;
+    font-family: sans-serif;
+    position:relative;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+nav{
+    width:84%;
+    margin:auto;
+    padding:10px 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+     /* border-bottom: 1px solid #333; */
+     /* border:1px solid var(--secondary-color); */
+}
+.logo{
+    width:50px;
+    cursor:pointer;
+}
+nav ul li{
+    display:inline-flex;
+    list-style: none;
+    margin:10px 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    /* color:#081b29; */
+}
+nav ul li a:hover{
+    color:#ff4321;
+}
+.info{
+    margin-left:8%;
+    margin-top:15%;
+}
+.info h1{
+    font-size:70px;
+    color:var(--secondary-color);
+    margin-bottom: 20px;
+}
+h1::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height: 100%;
+    background: #1d1d1d;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+@keyframes showRight{
+    100%{
+        width:0;
+    }
+}
+span{
+    color:#ff4321;
+}
+.info p{
+    color:#606163;
+    line-height: 22px;
+    color:var(--secondary-color);
+}
+.info a{
+    background:#212121;
+    padding:10px 18px;
+    text-decoration: none;
+    color:#fff;
+    display:inline-block;
+    margin:30px 0;
+    border-radius: 5px;
+}
+
+     </style>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/people-avatar-1-2/512/29-1024.png"
+          class="logo"/>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">Services</a></li>
+          <li>
+            <img
+              id="theme"
+              style="width: 30px"
+              src="https://i.postimg.cc/nVNF7w5D/device-theme.png"
+              alt=""/>
+          </li>
+        </ul>
+      </nav>
+      <div class="info">
+        <h1>I'm <span>Bala</span> Chandrudu</h1>
+        <p>Software Developer, UI/UX Designer, and Entrepreneur</p>
+        <a href="">Download cv</a>
+      </div>
+    </div>
+    <script>
+      var icon = document.getElementById("theme");
+
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
+    </script>
+  </body>
+</html>
